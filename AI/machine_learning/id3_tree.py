@@ -4,9 +4,8 @@ from feature_selection import calculate_information_entropy,calculate_informatio
 
 class Node:
     #决策树节点类
-    def __init__(self,feature_idx=None,threshold=None,value=None,children=None):
+    def __init__(self,feature_idx=None,value=None,children=None):
         self.feature_idx=feature_idx#特征索引
-        self.threshold=threshold#阈值（用于连续特征。然而原生的ID3不支持连续特征，所以后面我们会使用二分离散化进行扩展）
         self.value=value
         self.children=children or {}
 
