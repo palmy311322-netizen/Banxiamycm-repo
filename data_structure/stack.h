@@ -9,7 +9,6 @@ class Stack
 public:
     explicit Stack(int capacity);
     ~Stack();
-
     Stack(const Stack&) = delete;
     Stack& operator=(const Stack&) = delete;
 

@@ -1,5 +1,6 @@
 #pragma once
 #include "queue.h"
+#include "stack.h"
 
 template <typename ElemType>
 class BinaryTreeNode

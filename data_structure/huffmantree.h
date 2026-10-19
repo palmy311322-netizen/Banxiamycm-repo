@@ -54,8 +54,8 @@ public:
     HuffmanTreeNode<ElemType>* getRoot();
     map<ElemType, string> getCodes();
     void printCodes();
-    vector<int> encode(const vector<ElemType>& text);
-    vector<ElemType> decode(const vector<int>& bits);
+    string encode(const vector<ElemType>& text);
+    vector<ElemType> decode(const string& bits);
 };
 
 //HuffmanTreeNode实现
@@ -167,13 +167,14 @@ template <typename ElemType>
 void HuffmanTree<ElemType>::build(const vector<ElemType>& data, const vector<int>& weights)//构建哈夫曼树
 {
     Heap<HuffmanTreeNode<ElemType>*, HuffmanNodeCompare<ElemType>> heap;
-    for (int i = 0; i < (int)data.size(); i++)
+    for (int i = 0; i < (int)data.size(); i++)//建堆，数据类型是HuffmanTreeNode
     {
         HuffmanTreeNode<ElemType>* node = new HuffmanTreeNode<ElemType>(data[i], weights[i]);
         heap.push(node);
     }
     while (heap.size() > 1)
     {
+        //从堆顶先后弹出两个HuffmanTreeNode,分别作为左右子树建树
         HuffmanTreeNode<ElemType>* left = heap.top();
         heap.pop();
         HuffmanTreeNode<ElemType>* right = heap.top();
@@ -186,7 +187,7 @@ void HuffmanTree<ElemType>::build(const vector<ElemType>& data, const vector<int
         left->setParent(parent);
         right->setParent(parent);
 
-        heap.push(parent);
+        heap.push(parent);//将新树再次插入堆中，重复这个过程
     }
     root = heap.top();
     root->setParent(nullptr);
@@ -207,8 +208,8 @@ void HuffmanTree<ElemType>::generateCodes(HuffmanTreeNode<ElemType>* node, strin
         codes[node->getData()] = code;
         return;
     }
-    generateCodes(node->getLeft(), code + "0", codes);
-    generateCodes(node->getRight(), code + "1", codes);
+    generateCodes(node->getLeft(), code + "0", codes);//左路径+"0"
+    generateCodes(node->getRight(), code + "1", codes);//右路径+"1"
 }
 
 template <typename ElemType>
@@ -230,29 +231,25 @@ void HuffmanTree<ElemType>::printCodes()//输出哈夫曼编码表
 }
 
 template <typename ElemType>
-vector<int> HuffmanTree<ElemType>::encode(const vector<ElemType>& text)//哈夫曼编码
+string HuffmanTree<ElemType>::encode(const vector<ElemType>& text)//哈夫曼编码
 {
     map<ElemType, string> codes = getCodes();
-    vector<int> bits;
-    for (int i = 0; i < (int)text.size(); i++)
+    string bits;
+    for (int i = 0; i < (int)text.size(); i++)//按照text长度遍历
     {
-        string code = codes[text[i]];
-        for (int j = 0; j < (int)code.size(); j++)
-        {
-            bits.push_back(code[j] - '0');
-        }
+        bits += codes[text[i]];
     }
     return bits;
 }
 
 template <typename ElemType>
-vector<ElemType> HuffmanTree<ElemType>::decode(const vector<int>& bits)//哈夫曼解码
+vector<ElemType> HuffmanTree<ElemType>::decode(const string& bits)//哈夫曼解码
 {
     vector<ElemType> result;
     HuffmanTreeNode<ElemType>* current = root;
     for (int i = 0; i < (int)bits.size(); i++)
     {
-        if (bits[i] == 0)
+        if (bits[i] == '0')
             current = current->getLeft();
         else
             current = current->getRight();
