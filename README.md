@@ -1,6 +1,5 @@
 # Banxiamycm-repo
-半夏满园茶蘼的仓库
-
-我是半夏满园茶蘼，这个是我的仓库，欢迎大家呀！  
-因为我比较懒，我不想建多个代码仓库来分开存放，所以我应该只有这一个仓库  
-感谢大家愿意看我的代码，也欢迎大家提出里面的问题  
+**Banxiamycm's Codebase**
+I'm Banxiamycm, and welcome to my warehouse!  
+To be honest, I'm a bit too lazy to split my projects into different repos, so this will probably be my one and only.  
+I really appreciate you taking a look at my code, and you are more than welcome to point out any problems.
