@@ -1,0 +1,31 @@
+# 每日学习督促助手配置文件
+# 复制此文件为 config.toml 并填入你的配置
+
+[api]
+# API 密钥（必填）
+# 也可以设置环境变量 ANTHROPIC_API_KEY
+api_key = ""
+
+# API 端点（可选）
+# 留空使用 Anthropic 官方端点
+# 或填写兼容端点，如：
+# - 百炼：https://dashscope.aliyuncs.com/compatible-mode/v1
+# - Kimi：https://api.moonshot.cn/v1
+# - DeepSeek：https://api.deepseek.com/v1
+base_url = ""
+
+# 模型名称（必填）
+# 官方：claude-3-5-sonnet-20241022, claude-3-opus-20240229 等
+# 兼容端点请查看对应文档
+model = "claude-3-5-sonnet-20241022"
+
+[reminder]
+# 每日提醒时间（HH:MM 格式）
+time = "09:00"
+
+# 是否启用提醒
+enabled = true
+
+[display]
+# 终端主题（预留）
+theme = "default"

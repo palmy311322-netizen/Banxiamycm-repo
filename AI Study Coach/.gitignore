@@ -1,0 +1,60 @@
+# ===== 个人数据 / 本地文件（不上传） =====
+# SQLite 数据库：包含用户的学习目标、任务、打卡记录等个人数据
+data.db
+*.db
+*.sqlite
+*.sqlite3
+
+# 用户配置：包含 API 密钥等敏感信息
+# （模板见 config.toml.example，该文件会正常上传）
+config.toml
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# 虚拟环境
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# ===== 测试 / 类型检查缓存 =====
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+
+# ===== IDE / 编辑器 =====
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ===== 操作系统 =====
+.DS_Store
+Thumbs.db
+desktop.ini
