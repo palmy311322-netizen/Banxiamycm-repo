@@ -1,6 +1,15 @@
-# Banxiamycm-repo
-**Banxiamycm's Codebase**  
+#**HOMEWORK1**  
+##**代码分析**  
+###mymath.py  
+依次实现手写各种基本的算法。  
 
-I'm Banxiamycm, and welcome to my warehouse!  
-To be honest, I'm a bit too lazy to split my projects into different repos, so this will probably be my one and only.  
-I really appreciate you taking a look at my code, and you are more than welcome to point out any problems.
+###main1.py
+打印图形略。  
+使用循环交互...输入对应的数字进行操作，输入'q'则退出。  
+
+##思考题
+本质上就是循环和递归的时间复杂度的区别。  
+这里使用的是朴素递归，那时间复杂度就是O(2^n)；  
+循环实现，时间复杂度是O(n)。
+具体说两者耗时的差距是多少，这个相差肯定是巨大的，但是要是问具体耗时多少，肯定要和py版本和我的机器有关系。
+
