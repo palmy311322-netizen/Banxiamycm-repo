@@ -1,0 +1,20 @@
+     日志分析报告
+总请求数: 999
+独立IP数: 203
+脏数据行数: 0
+各状态码占比:
+  2xx: 224 (22.4%)
+  3xx: 2 (0.2%)
+  4xx: 773 (77.4%)
+流量总计: 1228752 字节
+访问量Top10 URL:
+  /: 157
+  /favicon.ico: 32
+  /wp-admin/install.php?step=1: 17
+  /robots.txt: 9
+  /.env: 5
+  /team_building/team_building.html: 5
+  /.git/config: 4
+  /team_building/team_building/nothing.html: 4
+  /team_building/team_building/langrensha.html: 4
+  /config.json: 3
