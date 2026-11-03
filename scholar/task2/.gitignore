@@ -1,0 +1,9 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Editor
+.vscode/
+
+# 暂不上传
+content3/Classification.md
