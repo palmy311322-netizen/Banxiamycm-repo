@@ -20,8 +20,8 @@
 如果研究人员把研究对象按照年龄段分组，他们发现每个年龄组的人锻炼得越多，胆固醇就越低，如图1所示。显然积极锻炼对降低胆固醇水平是有益的。但是如果研究人员把研究对象不按年龄段进行分组，即把所有年龄段的研究对象放到一起分析，他们得出一个相反的结论：人们锻炼的时间越长，胆固醇越高，如图2所示。
 <table>
   <tr>
-    <td align="center"><img src="images/1.png" width="360" height="280" alt="图1"></td>
-    <td align="center"><img src="images/2.png" width="360" height="280" alt="图2"></td>
+    <td align="center"><img src="images1/1.png" width="360" height="280" alt="图1"></td>
+    <td align="center"><img src="images1/2.png" width="360" height="280" alt="图2"></td>
   </tr>
   <tr>
     <td align="center">图1</td>
@@ -80,7 +80,7 @@
 
 如图3，就是一个有向无环图。  
 <p align="center">
-  <img src="images/3.png" width="300" alt="图3">
+  <img src="images1/3.png" width="300" alt="图3">
 </p>
 <p align="center">图3</p>
 
@@ -92,9 +92,9 @@
 
 <table>
   <tr>
-    <td align="center"><img src="images/4-1.png" width="240" alt="链结构"></td>
-    <td align="center"><img src="images/4-2.png" width="240" alt="叉结构"></td>
-    <td align="center"><img src="images/4-3.png" width="240" alt="对撞结构"></td>
+    <td align="center"><img src="images1/4-1.png" width="240" alt="链结构"></td>
+    <td align="center"><img src="images1/4-2.png" width="240" alt="叉结构"></td>
+    <td align="center"><img src="images1/4-3.png" width="240" alt="对撞结构"></td>
   </tr>
   <tr>
     <td align="center">（a）链结构</td>
@@ -120,7 +120,7 @@
 图5是一个有向无环图，我们将借助它来演示上面的相关概念。  
 
 <p align="center">
-  <img src="images/5.png" width="320" alt="图5">
+  <img src="images1/5.png" width="320" alt="图5">
 </p>
 <p align="center">图5</p>
 
@@ -182,7 +182,7 @@ $B$ 和 $N$ 之间共有四条路径：
 当观测数据中出现未观测到的**隐变量**时，有向无环图将难以有效表示这些隐变量。  
 
 <p align="center">
-  <img src="images/6.png" width="360" alt="图6">
+  <img src="images1/6.png" width="360" alt="图6">
 </p>
 <p align="center">图6</p>
 
@@ -211,7 +211,7 @@ Richardson等提出了最大祖先图（MAG）模型。最大祖先图在有隐�
 最大祖先图
 图7是图6所对应的最大祖先图。  
 <p align="center">
-  <img src="images/7.png" width="360" alt="图7">
+  <img src="images1/7.png" width="360" alt="图7">
 </p>
 <p align="center">图7　图6所对应的最大祖先图</p>
 
@@ -232,9 +232,9 @@ DAG中存在等价类，即等价类满足同样的条件独立性和具有相�
 > （3）可变端点，记为“ $o$”，表示等价类中的某些 MAG 在该端点处有箭头，而其它 MAG在该端点处有一个尾部。
 <table align="center">
   <tr>
-    <td align="center"><img src="images/8-a.png" width="280" alt="图8-a"></td>
-    <td align="center"><img src="images/8-b.png" width="280" alt="图8-b"></td>
-    <td align="center"><img src="images/8-c.png" width="280" alt="图8-c"></td>
+    <td align="center"><img src="images1/8-a.png" width="280" alt="图8-a"></td>
+    <td align="center"><img src="images1/8-b.png" width="280" alt="图8-b"></td>
+    <td align="center"><img src="images1/8-c.png" width="280" alt="图8-c"></td>
   </tr>
   <tr>
     <td align="center">图8-a</td>
@@ -267,7 +267,7 @@ $$P(\mathcal{V})=\prod_{i=1}^{N}P\big(V_i\mid \mathcal{Pa}(V_i)\big) \qquad \tex
 
 如图9所示的贝叶斯网络由四个节点构成的有向无环图和相应的条件概率表构成。其中所示的贝叶斯网络的四个节点的联合概率分布，由每个节点与它的父节点构成的局部概率分布表示。
 <p align="center">
-  <img src="images/9.png" width="420" alt="图9">
+  <img src="images1/9.png" width="420" alt="图9">
 </p>
 <p align="center">图9　一个简单的带有条件概率分布表的贝叶斯网络</p>
 
@@ -289,7 +289,7 @@ $$P\big(V_i\mid \mathcal{An}(V_i),\mathcal{Pa}(V_i)\big)=P\big(V_i\mid \mathcal{
 例如，图10中贝叶斯网络的联合概率分布 $P(X,Y,Z,W)=P(X)P(Y\mid X)P(Z\mid Y)P(W\mid Z)$。对于离散数据，我们不需要创建一张联合概率表，只需为四个局部概率分布 $P(X)$、 $P(Y\mid X)$、 $P(Z\mid Y)$、 $P(W\mid Z)$ 创建四张条件概率表，如图10所示。
 
 <p align="center">
-  <img src="images/10.png" width="430" alt="图10">
+  <img src="images1/10.png" width="430" alt="图10">
 </p>
 <p align="center">图10　利用贝叶斯网络和式(1-1)估算联合概率分布的例子</p>
 
@@ -332,7 +332,7 @@ $$P(\text{无雪},\text{路面无冰},\text{路面打滑},\text{摔跤})\approx 
 变量消元法利用贝叶斯网络联合概率分布的模块化性质，将联合概率分布分解为每个节点给定其父节点的条件概率的乘积，然后通过改变求和与乘积运算的次序对联合概率分布的变量进行边缘化，实现联合分布中的变量消除。我们通过图11给出一个消元推理的例子：求解 $P(J,Y,M)$ 的联合概率，需要对联合概率分布公式中的变量 $C$、 $Z$、 $L$ 进行求和，从而实现消元，如式1-3所示。
 
 <p align="center">
-  <img src="images/11.png" width="230" alt="图11">
+  <img src="images1/11.png" width="230" alt="图11">
 </p>
 <p align="center">图11　贝叶斯网络与消元推理</p>
 
